@@ -20,11 +20,11 @@ def send_welcome(message):
 def handle_message(message):
     msg = bot.reply_to(message, "🔄 AI javob tayyorlamoqda...")
     try:
-        response = client.models.generate_content(
-            model='gemini-3.6-flash',
-            ,
+                response = client.models.generate_content(
+            model='gemini-2.5-flash',
             contents=message.text
-        )
+                
+        
         text_response = response.text if response and response.text else "Javob olinmadi."
         bot.edit_message_text(text_response, chat_id=message.chat.id, message_id=msg.message_id)
     except Exception as e:
