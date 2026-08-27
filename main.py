@@ -2,7 +2,7 @@ import os
 import telebot
 from google import genai
 
-BOT_TOKEN = "8935762970:AAHOJcuRmBeNd2Up4NdLVdPgjf8dzZgyolc"
+BOT_TOKEN = "8935762970:AAHOJcuRmBeNd2Up4ndLVdPgjf8dzZgyolc"
 GEMINI_KEY = "AQ.Ab8RN6JdNLQgKxCCDYANlz_6c1gnh4QAx-43MTWlMwkVVEOcBQ"
 
 bot = telebot.TeleBot(BOT_TOKEN)
@@ -16,7 +16,7 @@ def send_welcome(message):
 def handle_message(message):
     try:
         response = client.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-3.6-flash',
             contents=message.text
         )
         bot.reply_to(message, response.text)
