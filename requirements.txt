@@ -1,3 +1,2 @@
-pyTelegramBotAPI
-google-genai
-python-pptx
+pytelegrambotapi
+google-generativeai
