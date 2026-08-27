@@ -21,7 +21,8 @@ def handle_message(message):
     msg = bot.reply_to(message, "🔄 AI javob tayyorlamoqda...")
     try:
         response = client.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-3.6-flash',
+            ,
             contents=message.text
         )
         text_response = response.text if response and response.text else "Javob olinmadi."
